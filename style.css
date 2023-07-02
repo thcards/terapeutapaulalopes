@@ -179,12 +179,12 @@ svg{
     columns: var(--font-medium);
     color: var(--text-color);
     font-style: oblique;
-    font-size: 35px;
+    font-size: 11px;
 }
 
 .nav__logo span{
     color: var(--text-color2);
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .nav__toggle,
