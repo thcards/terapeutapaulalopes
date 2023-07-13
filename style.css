@@ -8,14 +8,14 @@
   /*cores*/
 
 --hue: 68;
---test-color: hsl(68, 41%, 62%);
+--test-color: hsl(68, 50%, 80%);
 --first-color: hsl(var(--hue),50%, 80%);
 --first-color-alt: hsl(var(--hue),56%, 45%);
---title-color: hsl(202, 12%, 35%);
---text-color: hsl(165, 31%, 26%);
---text-color2: hsl(143, 43%, 21%);
+--title-color: hsl(34, 53%, 84%);
+--text-color: hsl(48, 31%, 26%);
+--text-color2: hsl(27, 70%, 40%);
 --body-color: hsl(53, 35%, 85%);
---container-color: hsl(194, 81%, 94%);
+--container-color: hsl(18, 27%, 83%);
 
 /*FONTES E TIPOGRAFIAS*/
 /* 0.5rem = 8px  1rem = 16px*/
@@ -179,7 +179,7 @@ svg{
     columns: var(--font-medium);
     color: var(--text-color);
     font-style: oblique;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .nav__logo span{
@@ -190,13 +190,19 @@ svg{
 .nav__toggle,
 .nav__close{
     display: flex;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--title-color);
     cursor: pointer;
     justify-content: flex-end;
     margin-right: 15px;
     
 }
+
+.nav__toggle{
+  color: rgb(240, 136, 38);
+}
+
+
 
 /* === NAVEGAÇÃO PARA MOBILES === */
 @media screen and (max-width:4320px){
@@ -263,7 +269,8 @@ svg{
 
 .container{
     padding: 0 2rem;
-    margin: 0 auto;
+    margin: 10px;
+    margin-top: 10px;
 }
 .container2{
   padding: 0 2rem;
@@ -389,4 +396,34 @@ border: 5%;
     font-size: var(--small-font-size);
     columns: var(--title-color);
 }
+
+
+@media screen and (max-width:390px){
+.section, .container, .container2, .imgContainer, .imgContainer2, .imgContainer3 {
+  display: flex;
+  flex-direction: column;
+}
+.imgContainer, .imgContainer2, .imgContainer3 {
+  width: 250px;
+}
+
+}
+
+@media screen and (max-width:750px){
+  .section, .container, .container2, .imgContainer, .imgContainer2, .imgContainer3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .imgContainer, .imgContainer2, .imgContainer3 {
+    width: 300px;
+    margin: 10px;
+  }
+
+  .text {
+    margin: 20px;
+  }
+
+
+  
+  }
 
