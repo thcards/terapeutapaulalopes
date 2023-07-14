@@ -7,15 +7,15 @@
 
   /*cores*/
 
---hue: 68;
---test-color: hsl(68, 50%, 80%);
+--hue: 171;
+--test-color: hsl(171, 51%, 89%);
 --first-color: hsl(var(--hue),50%, 80%);
 --first-color-alt: hsl(var(--hue),56%, 45%);
---title-color: hsl(34, 53%, 84%);
---text-color: hsl(48, 31%, 26%);
---text-color2: hsl(27, 70%, 40%);
---body-color: hsl(53, 35%, 85%);
---container-color: hsl(18, 27%, 83%);
+--title-color: hsl(180, 53%, 84%);
+--text-color: hsl(235, 39%, 59%);
+--text-color2: hsl(189, 70%, 40%);
+--body-color: hsl(180, 25%, 90%);
+--container-color: hsl(222, 26%, 83%);
 
 /*FONTES E TIPOGRAFIAS*/
 /* 0.5rem = 8px  1rem = 16px*/
@@ -54,6 +54,8 @@
   }
 }
 
+.outdoor{margin-top: 50px;}
+
 /* BASE */
 *{
   box-sizing: border-box;
@@ -86,7 +88,7 @@ button{
 }
 
 h1,h2,h3,h4{
-  color: hsl(144, 22%, 25%);;
+  color: hsl(214, 22%, 25%);;
   font-weight: var(--font-medium);
 }
 
@@ -107,10 +109,22 @@ svg{
 .container{
   max-width: 1120px;
   margin-inline: 1.5rem;
+  display: flex;
+  align-items: center;
+  
+  text-align: center;
 }
 .container2{
   max-width: 1120px;
   margin-inline: 1.5rem;
+  display: flex;
+  align-items: center;
+  
+  text-align: center;
+}
+
+.outdoor{
+ height: 50%;
 }
 
 .grid {
@@ -121,6 +135,7 @@ svg{
 .section{
   padding-block: 5rem 2rem;
   gap: 25px;
+  
 }
 
 .text{
@@ -130,6 +145,7 @@ svg{
 
 .section__title,
 .section__subtitle{
+
   text-align: center;
   color: var(--text-color);
   font-weight: var(--font-semi-bold);
@@ -162,11 +178,11 @@ svg{
     z-index: var(--z-fixed);
 }
 .nav_link{
-  color: hsl(69, 50%,50%);
+  color: hsl(258, 50%, 50%);
 }
 
 .nav_item{
-  color: hsl(68, 39%, 89%);
+  color: hsl(248, 39%, 89%);
 }
 .nav{
     height: var(--header-height);
@@ -179,12 +195,12 @@ svg{
     columns: var(--font-medium);
     color: var(--text-color);
     font-style: oblique;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .nav__logo span{
     color: var(--text-color2);
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .nav__toggle,
@@ -199,10 +215,19 @@ svg{
 }
 
 .nav__toggle{
-  color: rgb(240, 136, 38);
+  color: rgb(109, 38, 240);
 }
 
+.person{
+  max-width: 100vw;
+}
 
+.button{
+  background-color: rgb(109, 38, 240);
+  color: rgb(173, 241, 241);
+  padding: 20px;
+  border-radius: 8px;
+}
 
 /* === NAVEGAÇÃO PARA MOBILES === */
 @media screen and (max-width:4320px){
@@ -211,7 +236,7 @@ svg{
         top: 0;
         right: -100%;
         background-color: hsla(0, 0%, 10%, .3);
-        width: 40%;
+        width: 50%;
         height: 100%;
         padding: 4.5rem 0 0 3rem;
         backdrop-filter: blur(24px);
@@ -268,16 +293,25 @@ svg{
 /* para*/ 
 
 .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
     padding: 0 2rem;
     margin: 10px;
     margin-top: 10px;
 }
 .container2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 2rem;
   margin: 0 auto;
 }
 
 .imageContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
     position: relative;
     width: 50%;
     gap: 25px;
@@ -296,23 +330,22 @@ svg{
     position: relative;
 }
 
-.shadow{
-    position: absolute;
-    bottom: 100%;
-    height: 50px;
-    width: 100%;
-    left: 0;
-    z-index: 20;
-    background: linear-gradient(to top , #ffffff, transparent);
-}
+
 
 .imgContainer{
-    width: 2400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 2400px;
+
     height: auto;
     gap: 25px;
 }
 
 .imgContainer2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   display: flex;
   width: 2400px;
   height: auto;
@@ -320,12 +353,18 @@ svg{
 
 .imgContainer3{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
   width: 700px;
   height: auto;
   row-gap: 50px;
 }
 
 .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 display: flex;
 flex-direction: row-reverse;
 align-items: center;
@@ -335,8 +374,9 @@ border: 5%;
 
 .container2{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+
   gap: 10%;
   border: 15px;
   }
@@ -359,11 +399,13 @@ border: 5%;
 .contact__group{
     display: grid;
     row-gap: 1rem;
+   
 }
 
 .contact__form{
 
     position: relative;
+    
 }
 
 .contact__input{
@@ -371,6 +413,7 @@ border: 5%;
     border-radius: .5rem;
     background-color: hsl(175, 33%, 73%);
     color: var(--title-color);
+    
 }
 
 .contact__input::placeholder{
@@ -387,6 +430,7 @@ border: 5%;
 .contact__button{
     justify-self: center;
     cursor: pointer;
+    
 }
 
 .contact__message{
